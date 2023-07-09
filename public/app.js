@@ -1,3 +1,15 @@
+"use strict";
+// import {Invoice} from "./classes/Invoices.js";
+const me = {
+    name: "Arunkumar M",
+    greet(sal) {
+        console.log(`${sal} ${this.name}`);
+    }
+};
+function greetMe(me) {
+    me.greet("hola");
+}
+greetMe(me);
 const form = document.querySelector(".new-tx-form");
 const type = document.querySelector("#type");
 const tofrom = document.querySelector("#tofrom");
@@ -8,4 +20,3 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 });
-export {};

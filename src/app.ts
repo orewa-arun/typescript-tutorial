@@ -1,5 +1,23 @@
 
-import {Invoice} from "./classes/Invoices.js";
+// import {Invoice} from "./classes/Invoices.js";
+
+interface isPerson {
+    name : string;
+    greet( s : string) : void;
+}
+
+const me : isPerson = {
+    name : "Arunkumar M",
+    greet(sal : string){
+        console.log(`${sal} ${this.name}`);
+    }
+}
+
+function greetMe(me : isPerson) {
+    me.greet("hola");
+}
+
+greetMe(me);
 
 const form = document.querySelector(".new-tx-form") as HTMLFormElement;
 
