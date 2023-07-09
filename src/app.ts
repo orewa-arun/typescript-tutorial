@@ -1,3 +1,6 @@
+
+import {Invoice} from "./classes/Invoices.js";
+
 const form = document.querySelector(".new-tx-form") as HTMLFormElement;
 
 const type = document.querySelector("#type") as HTMLSelectElement;
