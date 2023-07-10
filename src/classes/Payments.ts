@@ -8,7 +8,7 @@ export class Payment implements hasFormatter{
         private amount : number
     ){}
 
-    format(): void {
-        console.log(`${this.recipient} paid ${this.amount} for ${this.details}`);
+    format() {
+        return (`${this.recipient} paid ${this.amount} for ${this.details}`);
     }
 }
