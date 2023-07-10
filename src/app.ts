@@ -29,3 +29,8 @@ form.addEventListener('submit', (e : Event) => {
 
     console.log(doc);
 });
+
+// Enums associate the values with numbers
+enum plasticTypes {PVC,LOOSE,HARD};
+
+console.log(plasticTypes.HARD);

@@ -22,3 +22,12 @@ form.addEventListener('submit', (e) => {
     list.render(doc, type.value, "end");
     console.log(doc);
 });
+// Enums associate the values with numbers
+var plasticTypes;
+(function (plasticTypes) {
+    plasticTypes[plasticTypes["PVC"] = 0] = "PVC";
+    plasticTypes[plasticTypes["LOOSE"] = 1] = "LOOSE";
+    plasticTypes[plasticTypes["HARD"] = 2] = "HARD";
+})(plasticTypes || (plasticTypes = {}));
+;
+console.log(plasticTypes.HARD);
