@@ -22,3 +22,17 @@ form.addEventListener('submit', (e) => {
     list.render(doc, type.value, "end");
     console.log(doc);
 });
+// generics
+// whatever T you allot will be used in the function/object
+const dormAllotment = (house) => {
+    const uid = Math.random();
+    // ... includes the uid into the object
+    console.log(Object.assign(Object.assign({}, house), { uid }));
+};
+// dormAllotment("Adler");
+dormAllotment({ name: "adler" });
+const adler = {
+    name: "adler",
+    total: { strength: 2300, magicLvl: 2000 }
+};
+console.log(adler);

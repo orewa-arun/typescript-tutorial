@@ -29,3 +29,29 @@ form.addEventListener('submit', (e : Event) => {
 
     console.log(doc);
 });
+
+// generics
+// whatever T you allot will be used in the function/object
+ const dormAllotment = <T extends object>(house : T) => {
+    const uid = Math.random();
+
+    // ... includes the uid into the object
+    console.log({...house,uid});
+ }
+
+// dormAllotment("Adler");
+dormAllotment({name : "adler"});
+
+// T must have {strength : number}
+// It can have extras
+interface dorm<T extends {strength : number}>{
+    name : string,
+    total : T
+}
+
+const adler : dorm<{strength : number , magicLvl : number}> = {
+    name : "adler",
+    total : {strength : 2300 , magicLvl : 2000}
+}
+
+console.log(adler);
